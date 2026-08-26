@@ -1,0 +1,8 @@
+# The build stage runs `pnpm install` itself; a host node_modules would be both
+# stale and enormous. `build` and `.svelte-kit` are outputs of the very step the
+# image runs, so copying them in would let a local artifact win over a fresh build.
+node_modules
+build
+.svelte-kit
+.git
+.github
